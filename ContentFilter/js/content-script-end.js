@@ -52,8 +52,8 @@ function createBlockTip(val) {
     let div = document.createElement('div');
     div.id = ids;
     // div.style = "position: fixed; text-align: center; padding: 2px; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 0, 0, 1); z-index: 44443333; border-radius: 0px;";
-    div.style = "position: fixed; text-align: center; padding: 2px; top: 0; left: 0; width: 200; height: 200; background-color: rgba(255, 0, 0, 1); z-index: 44443333; border-radius: 0px;";
-    div.innerHTML = `<input id=${ids + ".button"} type="button" value="OK" onclick=""><div>${JSON.stringify(val)}</div>`;
+    div.style = "position: fixed; text-align: center; padding: 30px; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 0, 0, 1); z-index: 44443333; border-radius: 0px;";
+    div.innerHTML = `<input id=${ids + ".button"} type="button" style="padding: 10px;" value="Соглашаюсь открыть" onclick=""><pre style= "margin: 30px;background-color: rgba(255, 0, 0, 1);">${JSON.stringify(val,null,4)}</pre>`;
     document.body.append(div)
 
     document.getElementById(ids + ".button").onclick = deleteBlockTip;
